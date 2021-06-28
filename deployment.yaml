@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask_api
+      app: web
   template:
     metadata:
       labels:
-        app: flask_api
+        app: web
     spec:
       containers:
-        - name: flask_api
-          image: 422476076098.dkr.ecr.us-west-1.amazonaws.com/flask_api_repo:latest
+        - name: web
+          image: 422476076098.dkr.ecr.us-west-1.amazonaws.com/eks-demo:latest
           ports:
             - containerPort: 5000
