@@ -23,6 +23,7 @@ phases:
       - echo Pushing the Docker image...
       - docker push $IMAGE_BASEID
       - docker push $IMAGE_BASEID:$IMAGE_TAG
+      - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name eks-demo-cluster
 
   post_build:
     commands:

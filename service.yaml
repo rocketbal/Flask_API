@@ -4,10 +4,10 @@ kind: Service
 metadata:
   name: backend-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
-    app: web
+    app: flask_api
   ports:
-    - nodePort: 31479
+    - protocol: TCP
       port: 8080
       targetPort: 5000
