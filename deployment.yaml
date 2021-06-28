@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: web
-          image: 422476076098.dkr.ecr.us-west-1.amazonaws.com/eks-demo:latest
+          image: DOCKER_IMAGE_ID
           ports:
             - containerPort: 5000

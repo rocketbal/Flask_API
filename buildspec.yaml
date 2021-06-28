@@ -26,8 +26,14 @@ phases:
       - echo Pushing the Docker image...
       - docker push $IMAGE_BASEID
       - docker push $IMAGE_BASEID:$IMAGE_TAG
-      
+      - echo Build completed on $(date)
 
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Deployment to your EKS cluster started on $(date)
+      - echo Image id = $IMAGE_BASEID:$IMAGE_TAG
+      - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name eks-demo-cluster
+      - sed s=DOCKER_IMAGE_ID=$IMAGE_BASEID:$IMAGE_TAG= ./deployment.yaml | kubectl apply -f -
+      - kubectl apply -f ./service.yaml
+      - echo Deployment completed on $(date)
+      - kubectl get svc 
