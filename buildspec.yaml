@@ -3,6 +3,7 @@ env:
   parameter-store:
     AWS_ACCESS_KEY_ID: "access-key-id"
     AWS_SECRET_ACCESS_KEY: "access-key-secret"
+    JWT_SECRET: "JWT_SECRET"
   git-credential-helper: yes
 phases:
   pre_build:
