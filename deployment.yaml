@@ -17,4 +17,4 @@ spec:
         - name: web
           image: DOCKER_IMAGE_ID
           ports:
-            - containerPort: 8080
+            - containerPort: 5000
