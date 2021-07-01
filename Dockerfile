@@ -5,5 +5,4 @@ COPY . .
 
 RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["python"]
-CMD ["main.py"]
+CMD ["gunicorn", "-b", ":8080", "main:APP"]
