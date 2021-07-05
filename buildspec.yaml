@@ -8,6 +8,8 @@ env:
 phases:
   pre_build:
     commands:
+      - pip3 install -r requirements.txt
+      - python -m pytest applications.py
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
   build:
