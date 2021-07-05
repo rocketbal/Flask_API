@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#// Image taggin shell script obtained from : https://nicd.ncl.ac.uk/blog/posts/continuous-application-deployment-with-aws-and-kubernetes/
 REPO_URL=$1
 
 if [[ -z $REPO_URL ]] ; then

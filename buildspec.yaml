@@ -1,3 +1,5 @@
+# buildspec developed by following: https://nicd.ncl.ac.uk/blog/posts/continuous-application-deployment-with-aws-and-kubernetes/
+
 version: 0.2
 env:
   parameter-store:
