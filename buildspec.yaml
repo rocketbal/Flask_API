@@ -39,6 +39,6 @@ phases:
       - echo Image id = $IMAGE_BASEID:$IMAGE_TAG
       - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name EKS-Demo-Cluster
       - sed s=DOCKER_IMAGE_ID=$IMAGE_BASEID:$IMAGE_TAG= ./deployment.yaml | kubectl apply -f -
-      - kubectl apply -f ./service.yaml
+      - kubectl apply -f ./service-prod.yaml
       - echo Deployment completed on $(date)
       - kubectl get svc
