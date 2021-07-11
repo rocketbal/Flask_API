@@ -5,6 +5,6 @@
 
 The Flask API consists of three endpoints:
 
-GET '/': This a simple health check which returns the response of 'Healthy'
-POST '/auth': This takes an email and a password as a JSON payload and returns a JWT based on a custom secret
-GET '/contents': This requires a valid JWT, and returns the un-encrypted contents of that token.
+GET '/': This a simple health check which returns the response of 'Healthy' <br />
+POST '/auth': This takes an email and a password as a JSON payload and returns a JWT based on a custom secret <br />
+GET '/contents': This requires a valid JWT, and returns the un-encrypted contents of that token. 
